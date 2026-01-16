@@ -1,0 +1,243 @@
+/* 
+   Davis Ford Lawyers - Design System Tokens
+   Based on extracted values from existing website + User Preferences (Poppins font)
+*/
+
+:root {
+    /* -------------------------------------
+     Color Palette
+     ------------------------------------- */
+    /* Brand Colors */
+    --color-brand-primary: #cf2e2e;
+    /* Vivid Red - likely a primary action color */
+    --color-brand-secondary: #000000;
+    /* Black */
+    --color-brand-tertiary: #abb8c3;
+    /* Cyan Bluish Gray */
+
+    /* Neutrals */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-100: #f7f7f7;
+    --color-gray-200: #e9e9e9;
+    --color-gray-500: #555555;
+    --color-gray-800: #333333;
+
+    /* Accent Colors (Extracted from global styles) */
+    --color-accent-pink: #f78da7;
+    --color-accent-orange: #ff6900;
+    --color-accent-amber: #fcb900;
+    --color-accent-green: #00d084;
+    --color-accent-blue: #0693e3;
+    --color-accent-purple: #9b51e0;
+
+    /* Text Colors */
+    --color-text-body: var(--color-gray-800);
+    --color-text-heading: var(--color-black);
+    --color-text-light: var(--color-gray-500);
+    --color-text-inverse: var(--color-white);
+
+    /* Functional Colors */
+    --color-link: #c36;
+    --color-link-hover: #336;
+    --color-success: var(--color-accent-green);
+    --color-warning: var(--color-accent-amber);
+    --color-error: var(--color-brand-primary);
+
+    /* -------------------------------------
+     Typography
+     ------------------------------------- */
+    --font-family-primary: 'Poppins', sans-serif;
+    /* Client requested Poppins only */
+
+    /* Font Families */
+    --font-body: var(--font-family-primary);
+    --font-heading: var(--font-family-primary);
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Font Sizes (Scale) */
+    --font-size-xs: 0.75rem;
+    /* 12px */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-lg: 1.125rem;
+    /* 18px */
+    --font-size-xl: 1.25rem;
+    /* 20px (Medium) */
+    --font-size-2xl: 1.5rem;
+    /* 24px */
+    --font-size-3xl: 2.25rem;
+    /* 36px (Large) */
+    --font-size-4xl: 2.625rem;
+    /* 42px (X-Large) */
+    --font-size-5xl: 3rem;
+    /* 48px */
+
+    /* Line Heights */
+    --line-height-tight: 1.1;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.625;
+
+    /* -------------------------------------
+     Spacing (Rem Scale)
+     ------------------------------------- */
+    --space-0: 0;
+    --space-1: 0.25rem;
+    /* 4px */
+    --space-2: 0.5rem;
+    /* 8px */
+    --space-3: 0.75rem;
+    /* 12px */
+    --space-4: 1rem;
+    /* 16px (Base Unit) */
+    --space-5: 1.25rem;
+    /* 20px */
+    --space-6: 1.5rem;
+    /* 24px */
+    --space-8: 2rem;
+    /* 32px */
+    --space-10: 2.5rem;
+    /* 40px */
+    --space-12: 3rem;
+    /* 48px */
+    --space-16: 4rem;
+    /* 64px */
+    --space-20: 5rem;
+    /* 80px */
+
+    /* Legacy/Extracted Spacing Presets */
+    --space-legacy-20: 0.44rem;
+    --space-legacy-30: 0.67rem;
+    --space-legacy-40: 1rem;
+    --space-legacy-50: 1.5rem;
+    --space-legacy-60: 2.25rem;
+    --space-legacy-70: 3.38rem;
+    --space-legacy-80: 5.06rem;
+
+    /* -------------------------------------
+     Borders & Radius
+     ------------------------------------- */
+    --border-radius-sm: 3px;
+    --border-radius-md: 6px;
+    --border-radius-lg: 12px;
+    --border-radius-full: 9999px;
+    /* For pills */
+
+    --border-width-thin: 1px;
+    --border-width-medium: 2px;
+
+    /* -------------------------------------
+     Shadows
+     ------------------------------------- */
+    --shadow-natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+    --shadow-deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+    --shadow-sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+    --shadow-outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);
+    --shadow-crisp: 6px 6px 0px rgb(0, 0, 0);
+
+    /* -------------------------------------
+     Transitions
+     ------------------------------------- */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* -------------------------------------
+   Reset & Base Styles
+   ------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-body);
+    background-color: var(--color-white);
+    line-height: var(--line-height-normal);
+    font-size: var(--font-size-base);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text-heading);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    margin-block-start: var(--space-6);
+    margin-block-end: var(--space-4);
+}
+
+h1 {
+    font-size: var(--font-size-5xl);
+}
+
+h2 {
+    font-size: var(--font-size-4xl);
+}
+
+h3 {
+    font-size: var(--font-size-3xl);
+}
+
+h4 {
+    font-size: var(--font-size-2xl);
+}
+
+h5 {
+    font-size: var(--font-size-xl);
+}
+
+h6 {
+    font-size: var(--font-size-lg);
+}
+
+p {
+    margin-bottom: var(--space-4);
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+/* -------------------------------------
+   Utility Classes (Helpers)
+   ------------------------------------- */
+.text-primary {
+    color: var(--color-brand-primary);
+}
+
+.bg-primary {
+    background-color: var(--color-brand-primary);
+    color: var(--color-white);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
